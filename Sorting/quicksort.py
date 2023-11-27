@@ -23,7 +23,7 @@ def partition(array, left, right, pivot):
         while left <= right and array[left] < pivot:
             left += 1
         
-        while left <= right and array[right] > pivot:
+        while left <= right and array[right] > pivot: # > not >= like in array partition
             right -= 1
         
         if left <= right:
@@ -32,6 +32,7 @@ def partition(array, left, right, pivot):
             right -= 1
     
     return [left, right]
+
 
 print(sortIntegers([1, 3, 100000, 2, 5]))
     
